@@ -11,5 +11,12 @@
     "ExpressJS"
   ],
   "author": "Shahid",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "chalk": "^2.3.0",
+    "jest": "^22.1.4"
+  }
 }

@@ -5,10 +5,11 @@
   "main": "app.js",
   "scripts": {
     "prestart": "node startMessage",
-    "start": "npm-run-all --parallel security-check open:app lint",
+    "start": "npm-run-all --parallel security-check open:app lint:watch",
     "open:app": "nodemon -q app",
     "security-check": "nsp check",
-    "lint": "esw ."
+    "lint": "esw .",
+    "lint:watch": "npm run lint -- --watch"
   },
   "keywords": [
     "NodeJS",

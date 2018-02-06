@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "prestart": "node startMessage",
-    "start": "node app",
+    "start": "npm-run-all --parallel security-check open:app",
+    "open:app": "node app",
     "security-check": "nsp check"
   },
   "keywords": [
@@ -20,6 +21,7 @@
   "devDependencies": {
     "chalk": "^2.3.0",
     "jest": "^22.1.4",
+    "npm-run-all": "^4.1.2",
     "nsp": "^3.1.0"
   }
 }

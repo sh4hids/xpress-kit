@@ -18,5 +18,5 @@ Simple ExpressJS starter kit with the best practices
 
 ### Configuration and Usage
 
-1. Editor configuration
+#### 1. Editor configuration
   If you are using Atom, VS Code or Sublime Text, install the `editorconfig` plugin for your favourite editor. You can change the default editor configuration in `.editorconfig` file. For more information please visit: [EditorConfig.org](http://editorconfig.org).

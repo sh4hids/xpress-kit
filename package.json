@@ -4,7 +4,7 @@
   "description": "This is a starter kit for ExpressJS",
   "main": "app.js",
   "scripts": {
-    "prestart": "node startMessage",
+    "prestart": "node helpers/messages/startMessage",
     "start": "npm-run-all --parallel security-check open:app lint:watch",
     "open:app": "nodemon -q app",
     "security-check": "nsp check",

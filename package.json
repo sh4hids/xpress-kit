@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "prestart": "node helpers/messages/startMessage",
-    "start": "npm-run-all --parallel security-check open:app lint:watch test:watch",
+    "start": "npm-run-all --parallel open:app lint:watch",
     "open:app": "nodemon -q app",
     "security-check": "nsp check",
     "lint": "esw .",
@@ -20,7 +20,8 @@
   "author": "Shahid",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mongoose": "^5.0.10"
   },
   "devDependencies": {
     "chalk": "^2.3.0",

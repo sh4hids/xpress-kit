@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
+const config = require('../config/config');
+const todoRouter = require('../components/todo/todo.route');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const init = function(app) {
+  app.use(`/${config.api}/todos`, todoRouter);
+}
 
-module.exports = router;
+module.exports = {
+  init
+};

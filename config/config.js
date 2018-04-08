@@ -1,6 +1,6 @@
 const config = {
   clientHost: 'http://localhost:4000',
-  apiVersion: 'api/v1',
+  api: 'api/v1',
 
   development: {
     db: 'mongodb://127.0.0.1/myapp',

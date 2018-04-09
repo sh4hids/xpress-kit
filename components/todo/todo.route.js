@@ -1,19 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const todo = require('./todo.controller');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.send({
-    success: true,
-    message: 'You have requested for books'
-  });
-});
-
-router.post('/', function(req, res, next) {
-  res.send({
-    success: true,
-    message: `You did try to add ${req.body}`
-  });
-});
+router.post('/', todo.createTask);
+router.get('/', todo.getAllTasks);
+router.get('/:id', todo.getSingleTask);
+router.put('/:id', todo.updateTask);
+router.delete('/:id', todo.deleteTask);
 
 module.exports = router;

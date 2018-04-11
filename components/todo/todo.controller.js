@@ -7,7 +7,7 @@ const createTask = function (req, res, next) {
     message: 'Added...',
     data: req.body
   });
-}
+};
 
 const getSingleTask = function (req, res, next) {
   res.send({
@@ -20,7 +20,7 @@ const getSingleTask = function (req, res, next) {
       }
     ]
   });
-}
+};
 
 const getAllTasks = function (req, res, next) {
   res.send({
@@ -37,7 +37,7 @@ const getAllTasks = function (req, res, next) {
       }
     ]
   });
-}
+};
 
 const updateTask = function (req, res, next) {
   console.log(req.body);
@@ -46,7 +46,7 @@ const updateTask = function (req, res, next) {
     message: 'Updated...',
     data: req.body
   });
-}
+};
 
 const deleteTask = function (req, res, next) {
   console.log(req.params.id);
@@ -55,7 +55,7 @@ const deleteTask = function (req, res, next) {
     message: 'Deleted...',
     data: req.params.id
   });
-}
+};
 
 
 module.exports = {

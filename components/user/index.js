@@ -5,5 +5,5 @@ const userRouter = require('./user.route');
 module.exports = {
   User,
   userController,
-  userRouter
+  userRouter,
 };

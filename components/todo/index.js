@@ -5,5 +5,5 @@ const todoRouter = require('./todo.route');
 module.exports = {
   Todo,
   todoController,
-  todoRouter
-}
+  todoRouter,
+};

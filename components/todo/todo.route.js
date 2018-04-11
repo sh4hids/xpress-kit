@@ -1,6 +1,7 @@
 const express = require('express');
-const router = express.Router();
 const todo = require('./todo.controller');
+
+const router = express.Router();
 
 router.post('/', todo.createTask);
 router.get('/', todo.getAllTasks);

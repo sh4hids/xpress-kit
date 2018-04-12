@@ -2,7 +2,7 @@ const env = process.env.NODE_ENV || 'development';
 const app = require('../app');
 const debug = require('debug')('xpress-kit:server');
 const http = require('http');
-const config = require('../config/config')[env];
+const config = require('../app/config/config')[env];
 
 /**
  * Get port from environment and store in Express.

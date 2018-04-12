@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "prestart": "node helpers/messages/start-message",
+    "prestart": "node app/helpers/messages/start-message",
     "start": "nodemon -q ./bin/www --exec \"npm run lint && node\"",
     "lint": "eslint ."
   },

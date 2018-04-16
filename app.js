@@ -4,7 +4,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const passport = require('passport');
+const mongoose = require('mongoose');
 const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 const keys = require('./app/config/keys');
 require('./app/config/passport');
 require('./app/config/db');
@@ -26,7 +28,11 @@ app.use(session({
   secret: keys.session.cookieSecret,
   resave: false,
   saveUninitialized: false,
-  // cookie: { secure: true }
+  cookie: {
+    secure: false,
+    maxAge: 3 * 24 * 60 * 60 * 1000,
+  },
+  store: new MongoStore({ mongooseConnection: mongoose.connection }),
 }));
 app.use(passport.initialize());
 app.use(passport.session());

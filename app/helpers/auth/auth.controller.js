@@ -17,7 +17,9 @@ const facebookCallbackHandler = function (req, res, next) {
 };
 
 const githubCallbackHandler = function (req, res, next) {
-  res.send('Logged in with facebook');
+  req.login(req.user, () => {
+    res.redirect('/api/v1/todos');
+  });
 };
 
 module.exports = {

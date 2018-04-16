@@ -3,6 +3,11 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const passport = require('passport');
+const session = require('express-session');
+const keys = require('./app/config/keys');
+require('./app/config/passport');
+require('./app/config/db');
 
 const routes = require('./app/routes');
 
@@ -17,6 +22,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: keys.session.cookieSecret,
+  resave: false,
+  saveUninitialized: false,
+  // cookie: { secure: true }
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 routes.init(app);
 

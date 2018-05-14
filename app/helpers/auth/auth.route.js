@@ -4,7 +4,6 @@ const passport = require('passport');
 
 const router = express.Router();
 
-router.get('/login', authController.logIn);
 // router.get('/login/google', authController.loginWithGoogle);
 router.get('/login/google/redirect', authController.googleCallbackHandler);
 router.get('/login/github', passport.authenticate('github', {
